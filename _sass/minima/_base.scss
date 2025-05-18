@@ -1,0 +1,301 @@
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+hr {
+  border: 1px solid $text-color;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+
+
+/**
+ * Basic styling
+ */
+body {
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  color: $text-color;
+  background-color: $background-color;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+     -moz-font-feature-settings: "kern" 1;
+       -o-font-feature-settings: "kern" 1;
+          font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+  margin-bottom: $spacing-unit * 0.5;
+  margin-top: $spacing-unit * 0.8;
+}
+
+h1, 
+%vertical-rhythm {
+    margin-bottom: $spacing-unit * 0.05;
+}
+
+h5,
+%vertical-rhythm {
+  margin-bottom: $spacing-unit * 0.05;
+  margin-top: $spacing-unit * 0.05;
+}
+
+/**
+ * `main` element
+ */
+main {
+  display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
+}
+
+
+
+/**
+ * Images
+ */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  max-height: 90vh;
+}
+
+
+
+/**
+ * Figures
+ */
+figure > img {
+  display: block;
+}
+
+figcaption {
+  font-size: $small-font-size;
+}
+
+
+
+/**
+ * Lists
+ */
+ul, ol {
+  margin-left: $spacing-unit;
+}
+
+li {
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5 {
+  font-weight: $bold-font-weight;
+  text-align: center;
+}
+
+h6 {
+  font-size: $big-font-size;
+  font-weight: $base-font-weight;
+  text-align: center;
+}
+
+
+
+/**
+ * Links
+ */
+a {
+  color: $brand-color;
+  text-decoration: none;
+
+  &:visited {
+    color: $brand-color;
+  }
+
+  &:hover {
+    /*color: $text-color;*/
+    color: lighten($brand-color, 15%);
+    /*text-decoration: underline;*/
+  }
+
+  .social-media-list &:hover {
+    text-decoration: none;
+
+    .username {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+/**
+ * Blockquotes
+ */
+blockquote {
+  color: $grey-color;
+  border-left: 4px solid $grey-color-light;
+  padding-left: $spacing-unit * 0.5;
+  @include relative-font-size(1.125);
+  letter-spacing: -1px;
+  font-style: italic;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+  @include relative-font-size(0.9375);
+  border: 1px solid $grey-color-light;
+  border-radius: 3px;
+  background-color: #eef;
+}
+
+code {
+  padding: 1px 5px;
+}
+
+pre {
+  padding: 8px 12px;
+  overflow-x: auto;
+
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+
+
+/**
+ * Wrapper
+ */
+.wrapper {
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+  @extend %clearfix;
+
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+    padding-right: $spacing-unit * 0.5;
+    padding-left: $spacing-unit * 0.5;
+  }
+}
+
+
+
+/**
+ * Clearfix
+ */
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/**
+ * Icons
+ */
+
+.svg-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    fill: #{$grey-color};
+    padding-right: 5px;
+    vertical-align: text-top;
+}
+
+.social-media-list {
+  li + li {
+    padding-top: 5px;
+  }
+}
+
+/**
+ * Tables
+ */
+table {
+  margin-top: 2%;
+  margin-bottom: 5%;
+  width: 100%;
+  text-align: $table-text-align;
+  color: $text-color;
+  border-collapse: collapse;
+  max-height: 100vh;
+  font-weight: $bold-font-weight;
+  th, td {
+    /*padding: ($spacing-unit * 0) ($spacing-unit * 0);*/
+    text-align: center;
+    object-fit: contain;
+  }
+}
+
+table img {
+  height: auto; /* Adjust as needed */
+  width: 100%; /* Maintains aspect ratio */
+  object-fit: contain;
+  vertical-align: top;
+  margin-bottom: 0;
+}
+
+/* Responsive Adjustments for Mobile */
+
+
+
+/* Minimalistic Audio Player */
+audio {
+  width: 100%;
+  height: 70px;
+  margin: 0px;
+}
+
+@media (max-width: 768px) {
+  audio {
+    height: 35px;
+  }
+}
+
+.responsive-iframe {
+  width: 100%;
+  height: 56.25vw; /* 16:9 Aspect Ratio */
+  max-height: 500px; /* Optional: Limit height */
+}
