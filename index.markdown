@@ -5,7 +5,7 @@
 layout: home
 ---
 
-# ORANSSIJOPO
+#
 
 ![Kansikuva](/images/kansikuva.jpg)
 
