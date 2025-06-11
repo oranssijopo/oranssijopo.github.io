@@ -106,7 +106,7 @@ Eijan tarinasta inspiroituneena **Jyri Pirinen** sävelsi ja esitti laulun "Kuiv
 
 ## MANSIKANNOKKA
 Ääni-improvisaatio
-##### Tekijä: Tuomo Kangasmaa ja Jyri Pirinen
+##### Tekijät: Tuomo Kangasmaa ja Jyri Pirinen
 
 ## VIDEO
 
